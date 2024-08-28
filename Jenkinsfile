@@ -20,11 +20,11 @@ pipeline{
                         steps{
  				script {
 			 if ( "${env.ENVIRONMENT}" == 'QA' ){
-        	sh 'cp target/Project-2.war /home/yashika/Documents/devtool/apache-tomcat-9.0.93/webapps'
+        	sh 'cp target/Pipeline.war /home/yashika/Documents/devtool/apache-tomcat-9.0.93/webapps'
         	echo "deployment has been done on QA!"
 			 }
 			else if ( "${env.ENVIRONMENT}" == 'UAT' ){
-    		sh 'cp target/Project-2.war /home/yashika/Documents/devtool/apache-tomcat-9.0.93/webapps'
+    		sh 'cp target/Pipeline.war /home/yashika/Documents/devtool/apache-tomcat-9.0.93/webapps'
     		echo "deployment has been done on UAT!"
 			}
 			echo "deployment has been done!"
