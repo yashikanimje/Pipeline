@@ -23,7 +23,7 @@ pipeline{
         	sh 'cp target/Project-2.war /home/yashika/Documents/devtool/apache-tomcat-9.0.93/webapps'
         	echo "deployment has been done on QA!"
 			 }
-			elif ( "${env.ENVIRONMENT}" == 'UAT' ){
+			else if ( "${env.ENVIRONMENT}" == 'UAT' ){
     		sh 'cp target/Project-2.war /home/yashika/Documents/devtool/apache-tomcat-9.0.93/webapps'
     		echo "deployment has been done on UAT!"
 			}
